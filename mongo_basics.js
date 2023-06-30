@@ -15,3 +15,15 @@ db.users.insertMany([
   { name: "Jane Smith", age: 35, email: "jane@example.com" },
   { name: "Mark Johnson", age: 28, email: "mark@example.com" },
 ]);
+
+//Aggregation Pipeline:
+db.users.aggregate([
+  { $match: { age: { $gt: 30 } } },
+  { $group: { _id: "$age", count: { $sum: 1 } } },
+  { $sort: { count: -1 } },
+  { $limit: 5 }
+]);
+
+//Deleting Documents:
+db.users.deleteOne({ name: "Jane Smith" });
+db.users.deleteMany({ age: { $lt: 30 } });
