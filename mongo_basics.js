@@ -33,3 +33,18 @@ db.users.updateOne({ name: "John Doe" }, { $set: { age: 31 } });
 
 //Indexing:
 db.users.createIndex({ name: 1 });
+
+//Transactions:
+const session = db.getMongo().startSession();
+session.startTransaction();
+
+try {
+  db.users.insertOne({ name: "Alice", age: 25 });
+  db.users.updateOne({ name: "John Doe" }, { $inc: { age: 1 } });
+
+  session.commitTransaction();
+} catch (error) {
+  session.abortTransaction();
+} finally {
+  session.endSession();
+}
