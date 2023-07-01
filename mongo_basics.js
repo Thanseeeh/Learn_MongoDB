@@ -27,3 +27,9 @@ db.users.aggregate([
 //Deleting Documents:
 db.users.deleteOne({ name: "Jane Smith" });
 db.users.deleteMany({ age: { $lt: 30 } });
+
+//Updating Documents:
+db.users.updateOne({ name: "John Doe" }, { $set: { age: 31 } });
+
+//Indexing:
+db.users.createIndex({ name: 1 });
