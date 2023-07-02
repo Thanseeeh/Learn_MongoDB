@@ -104,5 +104,30 @@ Tips for NoSQL Databases:
     and aggregations specific to the database system to optimize query performance.
 6. Asynchronous Operations: In certain scenarios, offload non-critical or time-consuming operations to background processes or asynchronous 
     queues to improve the responsiveness of the application and query performance.
+__________________________________________________________________________________________________________________________________________________________
 
+⚕️What are the bottlenecks that affect the performance of a Database?
+
+    Several factors can contribute to bottlenecks impacting database performance. Common bottlenecks include inadequate hardware resources such as CPU, 
+    memory, or storage, inefficient query design, lack of appropriate indexing, excessive data fragmentation, high levels of concurrent user activity, 
+    suboptimal configuration settings, network latency, and inefficient disk I/O operations. Additionally, improper data modeling, lack of caching 
+    mechanisms, and suboptimal database schema design can also negatively impact performance. Identifying and addressing these bottlenecks can help 
+    optimize database performance.
+_________________________________________________________________________________________________________________________________________________________
+
+⚕️What do you understand by query optimization?
+
+    Query optimization refers to the process of improving the performance and efficiency of database queries. It involves analyzing query execution 
+    plans, indexing strategies, data access patterns, and database schema design to minimize response times and resource usage, resulting in faster 
+    and more efficient query processing.
+_________________________________________________________________________________________________________________________________________________________
+
+⚕️When should I use a NoSQL database instead of a relational database?
+
+    NoSQL databases are suitable when you have unstructured or rapidly changing data, need high scalability and flexibility, have large amounts of 
+    data to process, or require horizontal distribution and replication capabilities. They are a good choice for use cases like real-time analytics, 
+    content management systems, social media platforms, IoT applications, and handling big data. Relational databases are more appropriate when your 
+    data has complex relationships, requires strong data integrity and consistency, and involves complex querying, transactions, and reporting needs. 
+    They are commonly used for applications like e-commerce platforms, financial systems, inventory management, and data-driven enterprise applications.
+_________________________________________________________________________________________________________________________________________________________
 */
