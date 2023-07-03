@@ -130,4 +130,48 @@ ________________________________________________________________________________
     data has complex relationships, requires strong data integrity and consistency, and involves complex querying, transactions, and reporting needs. 
     They are commonly used for applications like e-commerce platforms, financial systems, inventory management, and data-driven enterprise applications.
 _________________________________________________________________________________________________________________________________________________________
+
+⚕️How would you explain the concept of a query to a non-technical audience, such as client or end user?
+
+    A query is a request for information or data from a database. It's like asking a question to a database to get the specific information you need.
+    Instead of manually searching through a large amount of data, you can write a query that defines what you're looking for, such as finding all the
+    products in stock or retrieving customer details for a specific order. The database then processes your query and returns the relevant data,
+    making it easier and faster to retrieve the information you need without having to sift through all the data manually.
+__________________________________________________________________________________________________________________________________________________________
+
+⚕️What do you understand about NoSQL databases? Explain.
+
+    NoSQL databases, also known as non-relational databases, are a type of database system designed to handle large volumes of unstructured or 
+    semi-structured data. Unlike traditional relational databases, NoSQL databases do not require a fixed schema and provide flexible data models, 
+    making them suitable for handling diverse data types. They offer high scalability, distributed architectures, and horizontal partitioning, 
+    enabling efficient handling of big data and high-traffic scenarios. NoSQL databases are commonly used in applications requiring real-time 
+    analytics, content management, social media platforms, IoT, and handling massive amounts of data.
+_________________________________________________________________________________________________________________________________________________________
+
+⚕️What are the advantages and disadvantages of NoSQL over traditional RDBMS?
+
+    The advantages of NoSQL databases over traditional RDBMS include their ability to handle large volumes of unstructured data, flexibility in data 
+    modeling, horizontal scalability, and distributed architectures. NoSQL databases can offer high performance and availability, especially in 
+    scenarios with heavy read/write workloads and high traffic. However, NoSQL databases may lack transactional support and complex querying 
+    capabilities compared to RDBMS. They may also require more effort in data consistency and integrity management, and the lack of a fixed schema 
+    can make data governance and reporting challenging in certain cases.
+_________________________________________________________________________________________________________________________________________________________
+
+⚕️Explain advantages of BSON over JSON in MongoDB?
+
+    The main advantage of BSON (Binary JSON) over JSON in MongoDB is its ability to represent more data types and support efficient binary encoding. 
+    BSON provides additional data types like date, binary, and decimal, which are not natively available in JSON. This allows MongoDB to store and 
+    retrieve data more efficiently, resulting in better performance. Additionally, BSON's binary encoding reduces the size of data on disk and improves 
+    network transfer speeds, making it a preferred choice for data storage and exchange in MongoDB.
+_________________________________________________________________________________________________________________________________________________________
+
+⚕️
+⚕️
+⚕️
+⚕️
+⚕️
+⚕️
+⚕️
+⚕️
+⚕️
 */
