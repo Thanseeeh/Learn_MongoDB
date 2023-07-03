@@ -165,11 +165,47 @@ ________________________________________________________________________________
     network transfer speeds, making it a preferred choice for data storage and exchange in MongoDB.
 _________________________________________________________________________________________________________________________________________________________
 
-⚕️
-⚕️
-⚕️
-⚕️
-⚕️
+⚕️How can you achieve primary key - foreign key relationships in MongoDB?
+
+    In MongoDB, primary key - foreign key relationships, as traditionally defined in relational databases, are not enforced at the database level.
+    However, you can achieve similar relationships by embedding documents or using manual referencing. Embedding involves nesting related documents 
+    within a single document, allowing you to represent one-to-one or one-to-many relationships. Manual referencing involves storing references to 
+    related documents using fields such as ObjectId or another unique identifier. Although MongoDB does not enforce referential integrity, it provides 
+    mechanisms to perform validations and maintain data consistency within your application logic.
+__________________________________________________________________________________________________________________________________________________________
+
+⚕️What is normalization & Denormalization?
+
+    Normalization is the process of organizing data in a relational database to reduce redundancy and dependency, ensuring data integrity through a
+    series of normal forms. Denormalization, on the other hand, intentionally introduces redundancy in the database design to improve query performance
+    by reducing the need for complex joins, although it may compromise some data integrity and maintenance efficiency.
+__________________________________________________________________________________________________________________________________________________________
+
+⚕️When should I use a NoSQL database instead of a relational database?
+
+    NoSQL databases are typically preferred over relational databases when dealing with unstructured or rapidly changing data, requiring high scalability,
+    flexibility, and distributed architectures. They excel in handling big data, real-time analytics, content management systems, social media platforms,
+    IoT applications, and scenarios where horizontal scalability and fast data retrieval are crucial.
+_________________________________________________________________________________________________________________________________________________________
+
+⚕️Why MongoDB is known as the best NoSQL database?
+
+    MongoDB is often regarded as one of the best NoSQL databases due to its combination of powerful features and ease of use. It offers flexible data 
+    modeling with dynamic schemas, horizontal scalability, automatic sharding, and support for distributed architectures. MongoDB's document-oriented 
+    model allows for efficient handling of unstructured and semi-structured data. It provides rich query capabilities, including support for indexing, 
+    aggregation pipelines, and geospatial queries. Additionally, MongoDB's active and supportive community, extensive documentation, and widespread 
+    adoption contribute to its reputation as a leading NoSQL database.
+_________________________________________________________________________________________________________________________________________________________
+
+⚕️Does MongoDB need a lot of RAM? 
+
+    The amount of RAM required for MongoDB depends on various factors such as the size of the database, the workload, and the specific configuration 
+    settings. In general, MongoDB benefits from having sufficient RAM to store frequently accessed data and indexes in memory, which can significantly 
+    improve query performance. However, the actual amount of RAM needed varies and can be influenced by factors like data working set size, the 
+    complexity of queries, and the presence of indexes. Properly sizing the RAM for MongoDB is crucial to ensure optimal performance, and it is 
+    recommended to allocate an appropriate amount based on the specific requirements and workload of your MongoDB deployment.
+__________________________________________________________________________________________________________________________________________________________
+
 ⚕️
 ⚕️
 ⚕️
