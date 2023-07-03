@@ -206,8 +206,36 @@ ________________________________________________________________________________
     recommended to allocate an appropriate amount based on the specific requirements and workload of your MongoDB deployment.
 __________________________________________________________________________________________________________________________________________________________
 
-⚕️
-⚕️
-⚕️
-⚕️
+⚕️What do you mean by data integrity in SQL ?
+
+    Data integrity in SQL refers to the accuracy, consistency, and reliability of data stored in a database. It ensures that the data meets predefined 
+    rules and constraints, maintaining its quality and reliability over time. SQL provides mechanisms such as primary keys, foreign keys, constraints, 
+    and triggers to enforce data integrity rules, preventing invalid or inconsistent data from being inserted, updated, or deleted. By maintaining data 
+    integrity, SQL databases can ensure the reliability and validity of the information stored, promoting data consistency and trustworthiness.
+_________________________________________________________________________________________________________________________________________________________
+
+⚕️What is the need for MERGE statement SQL ?
+
+    The MERGE statement in SQL provides a convenient and efficient way to perform conditional INSERT, UPDATE, and DELETE operations on a target table 
+    based on a specified condition. It allows combining multiple operations into a single statement, simplifying complex data synchronization and 
+    ensuring data consistency. The MERGE statement is particularly useful when dealing with data integration, data warehousing, and managing data 
+    from multiple sources, as it streamlines the process of synchronizing and updating data across tables.
+_________________________________________________________________________________________________________________________________________________________
+
+⚕️What is an Index in SQL? explain different type of index ?
+
+    An index in SQL is a database structure that enhances data retrieval speed by providing quick access to specific data within a table. Different 
+    types of indexes include B-Tree, Hash, Bitmap, Full-Text, Clustered, and Non-Clustered indexes. Each type serves a specific purpose and is chosen 
+    based on the data characteristics and query requirements to optimize query performance and database efficiency.
+_________________________________________________________________________________________________________________________________________________________
+
+⚕️ What is the ACID property in a SQL database? 
+
+    The ACID property in a SQL database refers to a set of principles that ensure reliable and consistent transaction processing. ACID stands for 
+    Atomicity, Consistency, Isolation, and Durability. Atomicity ensures that a transaction is treated as a single, indivisible unit, where all its 
+    operations are either completed or rolled back. Consistency ensures that a transaction brings the database from one valid state to another, 
+    following predefined rules and constraints. Isolation ensures that concurrent transactions do not interfere with each other, providing the illusion 
+    that they are executed serially. Durability guarantees that once a transaction is committed, its changes are permanent and will survive any 
+    subsequent failures. The ACID properties ensure data integrity and reliability in SQL databases.
+    
 */
