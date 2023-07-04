@@ -41,3 +41,38 @@ db.posts.insertMany([
     date: Date()
   }
 ])
+
+db.posts.find()   //view all documents
+db.posts.findOne()    //view first document that matches the query
+db.posts.findOne({likes: 4}) //this will return the matching query that written in the object
+db.posts.find({}, {title: 1, date: 1})  //the second object is projection. we can specify the fields needed.
+db.posts.find({}, {_id: 0, title: 1, date: 1}) //this will exclude id and include title and date. but can't include 1 and 0 for common fields
+
+//updateOne operations
+db.posts.updateOne(
+  {title: "Post Title 1"},
+  {$set: {likes: 3}}
+)
+
+//updateMany operations
+db.posts.updateMany(
+  {},
+  {$inc: {likes: 1}}
+)
+
+//if you would like to insert the document if it is not found, you can use the upsert option.
+db.posts.updateOne( 
+  { title: "Post Title 5" }, 
+  {
+    $set: 
+      {
+        title: "Post Title 5",
+        body: "Body of post.",
+        category: "Event",
+        likes: 5,
+        tags: ["news", "events"],
+        date: Date()
+      }
+  }, 
+  { upsert: true }
+)
