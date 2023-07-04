@@ -48,13 +48,13 @@ db.posts.findOne({likes: 4}) //this will return the matching query that written 
 db.posts.find({}, {title: 1, date: 1})  //the second object is projection. we can specify the fields needed.
 db.posts.find({}, {_id: 0, title: 1, date: 1}) //this will exclude id and include title and date. but can't include 1 and 0 for common fields
 
-//updateOne operations
+//updateOne operation
 db.posts.updateOne(
   {title: "Post Title 1"},
   {$set: {likes: 3}}
 )
 
-//updateMany operations
+//updateMany operation
 db.posts.updateMany(
   {},
   {$inc: {likes: 1}}
@@ -76,3 +76,9 @@ db.posts.updateOne(
   }, 
   { upsert: true }
 )
+
+//deleteOne operation
+db.posts.deleteOne({ title: "Post Title 5" })
+
+//deleteMany operation
+db.posts.deleteMany({ category: "Technology" })
