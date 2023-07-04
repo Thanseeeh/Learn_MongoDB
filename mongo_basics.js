@@ -1,50 +1,43 @@
-// What is MongoDB?
-// MongoDB, a popular NoSQL database, uses a flexible and expressive query syntax called the MongoDB Query Language (MQL). 
-// Here are a few query syntax examples:
+//  What is MongoDB?
+//  MongoDB is a popular open-source document-oriented NoSQL (non-relational) database management system. It is designed to store, retrieve, and manage
+//  large volumes of structured and unstructured data. MongoDB is known for its flexibility, scalability, and ease of use.
 
-db.users.find({ age: 25 })  //basic find query
+db.createCollection("posts")  //creating collection
 
-db.users.find({ age: 25 }, { name: 1, _id: 0 }) //projection query
+//insertOne
+db.posts.insertOne({
+  title: "Post Title 1",
+  body: "Body of post.",
+  category: "News",
+  likes: 1,
+  tags: ["news", "events"],
+  date: Date()
+})
 
-db.users.find({ age: { $gt: 30 } }) //comparison query
-
-// Inserting Documents:
-db.users.insertOne({ name: "John Doe", age: 30, email: "john@example.com" });
-
-db.users.insertMany([
-  { name: "Jane Smith", age: 35, email: "jane@example.com" },
-  { name: "Mark Johnson", age: 28, email: "mark@example.com" },
-]);
-
-//Aggregation Pipeline:
-db.users.aggregate([
-  { $match: { age: { $gt: 30 } } },
-  { $group: { _id: "$age", count: { $sum: 1 } } },
-  { $sort: { count: -1 } },
-  { $limit: 5 }
-]);
-
-//Deleting Documents:
-db.users.deleteOne({ name: "Jane Smith" });
-db.users.deleteMany({ age: { $lt: 30 } });
-
-//Updating Documents:
-db.users.updateOne({ name: "John Doe" }, { $set: { age: 31 } });
-
-//Indexing:
-db.users.createIndex({ name: 1 });
-
-//Transactions:
-const session = db.getMongo().startSession();
-session.startTransaction();
-
-try {
-  db.users.insertOne({ name: "Alice", age: 25 });
-  db.users.updateOne({ name: "John Doe" }, { $inc: { age: 1 } });
-
-  session.commitTransaction();
-} catch (error) {
-  session.abortTransaction();
-} finally {
-  session.endSession();
-}
+//insertMany
+db.posts.insertMany([  
+  {
+    title: "Post Title 2",
+    body: "Body of post.",
+    category: "Event",
+    likes: 2,
+    tags: ["news", "events"],
+    date: Date()
+  },
+  {
+    title: "Post Title 3",
+    body: "Body of post.",
+    category: "Technology",
+    likes: 3,
+    tags: ["news", "events"],
+    date: Date()
+  },
+  {
+    title: "Post Title 4",
+    body: "Body of post.",
+    category: "Event",
+    likes: 4,
+    tags: ["news", "events"],
+    date: Date()
+  }
+])
