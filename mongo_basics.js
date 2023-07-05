@@ -82,3 +82,18 @@ db.posts.deleteOne({ title: "Post Title 5" })
 
 //deleteMany operation
 db.posts.deleteMany({ category: "Technology" })
+
+//Find documents with a specific tag
+db.posts.find({ tags: "news" })
+
+//Find documents with a likes count greater than 2
+db.posts.find({ likes: { $gt: 2 } })
+
+//Sort documents by date in descending order
+db.posts.find().sort({ date: -1 })
+
+//Count the number of documents in the collection
+db.posts.countDocuments()
+
+//Limit the number of documents returned
+db.posts.find().limit(5)
